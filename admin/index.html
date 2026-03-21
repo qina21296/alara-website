@@ -4,17 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager - ALARA Materials</title>
-  <!-- OAuth callback handler -->
-  <script>
-    // Handle OAuth callback
-    const hash = window.location.hash;
-    if (hash && hash.includes('access_token')) {
-      // OAuth redirect - will be handled by CMS
-    }
-  </script>
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <!-- Include the script that builds the page and powers Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  
+  <script>
+    // Initialize Netlify Identity
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.init({
+        container: '#netlify-modal'
+      });
+    }
+  </script>
 </body>
 </html>
