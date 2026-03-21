@@ -1,8 +1,8 @@
 # Netlify CMS Configuration
 backend:
-  name: git-gateway
+  name: github
+  repo: qina21296/alara-website
   branch: main
-  base_url: https://heroic-moonbeam-cffb4d.netlify.app  # OAuth callback URL
 
 media_folder: "images"
 public_folder: "/images"
