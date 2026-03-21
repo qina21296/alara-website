@@ -4,6 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager - ALARA Materials</title>
+  <!-- OAuth callback handler -->
+  <script>
+    // Handle OAuth callback
+    const hash = window.location.hash;
+    if (hash && hash.includes('access_token')) {
+      // OAuth redirect - will be handled by CMS
+    }
+  </script>
 </head>
 <body>
   <!-- Include the script that builds the page and powers Decap CMS -->
