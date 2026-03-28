@@ -66,6 +66,8 @@
     .nav-logo img { vertical-align: middle; }
     .nav-logo-icon { width: 40px; height: 40px; flex-shrink: 0; }
     .nav-logo-icon svg { width: 100%; height: 100%; }
+    .nav-logo-img { width: 52px; height: 52px; object-fit: contain; border-radius: 6px; flex-shrink: 0; }
+    .nav-logo-text { margin-left: 10px; font-size: 1.6rem; font-family: 'Montserrat', sans-serif; font-weight: 900; }
     .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
     .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.93rem; transition: color .2s; }
     .nav-links a:hover { color: var(--primary-light); }
@@ -450,8 +452,9 @@
       .nav-links, .nav-cta { display: none; }
       .nav-mobile-btn { display: block; }
       nav { padding: 0 4%; height: 60px; }
-      .nav-logo { font-size: 1.15rem; }
-      .nav-logo img { width: 48px !important; height: 48px !important; }
+      .nav-logo { font-size: 1rem; }
+      .nav-logo-img { width: 36px !important; height: 36px !important; }
+      .nav-logo-text { font-size: 1.1rem !important; margin-left: 6px !important; }
 
       /* Hero */
       .hero { padding: 80px 5% 48px; min-height: auto; }
@@ -638,8 +641,8 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">
-    <img src="LOGO5.png" alt="ALARA Logo" style="width:96px;height:96px;object-fit:contain;border-radius:6px;" />
-    <span style="margin-left:12px;font-size:2.16rem;">ALARA <span>Materials</span></span>
+    <img src="LOGO5.png" alt="ALARA Logo" class="nav-logo-img" />
+    <span class="nav-logo-text">ALARA <span>Materials</span></span>
   </a>
   <ul class="nav-links">
     <li class="dropdown">
@@ -1730,8 +1733,8 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="#" class="nav-logo" style="text-decoration:none;">
-        <img src="LOGO5.png" alt="ALARA Logo" style="width:96px;height:96px;object-fit:contain;border-radius:6px;" />
-        <span style="margin-left:12px;font-size:2.4rem;">ALARA <span>Materials</span></span>
+        <img src="LOGO5.png" alt="ALARA Logo" class="nav-logo-img" style="width:72px;height:72px;" />
+        <span class="nav-logo-text" style="font-size:2rem;">ALARA <span>Materials</span></span>
       </a>
       <p>Technology-driven manufacturer specializing in high-performance metal roofing and cladding systems for the global construction industry. ISO 9001 certified with operations in Foshan, Guangdong.</p>
       <div class="footer-social">
