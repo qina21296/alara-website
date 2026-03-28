@@ -39,8 +39,8 @@
       --radius-lg: 20px;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
 
     /* ===== NAV ===== */
     nav {
@@ -399,20 +399,22 @@
 
     /* ===== MOBILE NAV DRAWER ===== */
     .mobile-nav {
-      display: none;
+      display: flex;
+      flex-direction: column;
       position: fixed; top: 0; left: 0; bottom: 0;
       width: 280px; max-width: 88vw;
       background: #fff;
       z-index: 999;
       box-shadow: 4px 0 32px rgba(26,60,110,0.18);
-      flex-direction: column;
       overflow-y: auto;
       transform: translateX(-100%);
-      transition: transform 0.28s cubic-bezier(.4,0,.2,1);
+      visibility: hidden;
+      transition: transform 0.28s cubic-bezier(.4,0,.2,1), visibility 0s linear 0.28s;
     }
     .mobile-nav.open {
-      display: flex;
       transform: translateX(0);
+      visibility: visible;
+      transition: transform 0.28s cubic-bezier(.4,0,.2,1), visibility 0s linear 0s;
     }
     .mobile-nav-header {
       display: flex; align-items: center; justify-content: space-between;
